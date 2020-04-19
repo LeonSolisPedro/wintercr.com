@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run build --no-unsafe-inline
 
 # production stage
 FROM nginx:stable-alpine as production-stage
