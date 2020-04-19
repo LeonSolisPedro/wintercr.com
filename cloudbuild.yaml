@@ -17,5 +17,6 @@ steps:
   - 'us-east1'
   - '--platform'
   - 'managed'
+  - '--allow-unauthenticated'
 images:
 - gcr.io/wintercr/myimage
