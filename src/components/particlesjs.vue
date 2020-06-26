@@ -127,12 +127,6 @@ export default {
 </script>
 
 <style>
-html,
-body,
-#app {
-  height: 100%;
-}
-
 #particles-js {
   position: absolute;
   width: 100%;

@@ -1,6 +1,6 @@
 <template>
-  <b-container class="h-100">
-    <b-row class="h-100 justify-content-center align-items-center">
+  <b-container class="vh-100">
+    <b-row class="vh-100 justify-content-center align-items-center">
 
       <b-card img-src="../assets/yo.jpg" img-alt="Image">
 

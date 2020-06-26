@@ -1,5 +1,5 @@
 <template>
-  <header class="m-3 d-inline-block">
+  <header class="m-3">
 
     <div>
       <a href="mailto:pedro@wintercr.com" v-b-tooltip.hover title="Contáctame por Correo" class="mx-2" target="_top">
