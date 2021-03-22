@@ -9,13 +9,13 @@
     "report": "vue-cli-service build --report"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^0.1.10",
-    "bootstrap": "^4.5.3",
-    "bootstrap-vue": "^2.18.1",
-    "core-js": "^3.6.5",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.9.1",
     "particles.js": "^2.0.0",
     "vue": "^2.6.12",
     "vue-scrollto": "^2.20.0"
