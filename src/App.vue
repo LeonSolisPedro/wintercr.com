@@ -64,3 +64,12 @@ export default {
   }
 }
 </script>
+
+
+<style>
+.btn-info {
+    color: #fff !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+</style>

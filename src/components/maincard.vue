@@ -30,7 +30,7 @@ export default {
 
 <style>
 .card {
-  max-width: 400px;
-  width: 65%;
+  max-width: 400px !important;
+  width: 65% !important;
 }
 </style>
