@@ -39,8 +39,12 @@ function ready(fn) {
 }
 `
 
+
+const superCss = "#browser{display:none;background-color:#fff3cd;position:fixed;max-width:600px;width:80%;padding:5px 10px;top:10px;left:10px;z-index:1000;}#browserclose{float:right;cursor:pointer;margin:0}"
+
 console.log("Creating supportedbrowsers...")
 
 fs.writeFileSync("public/supportedBrowsers.js", superString)
+fs.writeFileSync("public/supportedBrowsers.css", superCss)
 
 console.log("Done!")
