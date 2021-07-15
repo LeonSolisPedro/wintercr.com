@@ -7,12 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>¡Hola!</title>
+  <script src="<%= BASE_URL %>supportedBrowsers.js"></script>
+  <style>#browser{display:none;background-color:#fff3cd;position:fixed;max-width:600px;width:80%;padding:5px 10px;top:10px;left:10px;z-index:1000;}#browserclose{float:right;cursor:pointer;margin:0}</style>
 </head>
 
 <body>
   <noscript>
     <strong>Debes Activar Javascript para continuar</strong>
   </noscript>
+  <div id="browser">
+    <p>Su navegador no es compatible, la página puede no funcionar correctamente</p>
+    <p id="browserclose">x</p>
+  </div>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>
