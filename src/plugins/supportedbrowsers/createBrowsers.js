@@ -37,7 +37,7 @@ function ready(func) {
     this.func();
   }
   else if (this.n < 60) {
-    setTimeout('ready()', 250);
+    setTimeout(function(){ready()}, 250);
   }
 };
 `
