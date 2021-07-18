@@ -1,6 +1,12 @@
 module.exports = {
   configureWebpack: {
-    devtool: "source-map"
+    devtool: "source-map",
+    module: {
+      rules: [
+        { test: /\.(jsfake)$/i, use: [{ loader: 'file-loader', options: { name: 'supportedbrowsers/[name].[contenthash:7].js', } }] },
+        { test: /\.(cssfake)$/i, use: [{ loader: 'file-loader', options: { name: 'supportedbrowsers/[name].[contenthash:7].css', } }] }
+      ]
+    }
   },
   productionSourceMap: false,
   chainWebpack: config => {
