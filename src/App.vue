@@ -49,10 +49,10 @@
 </template>
 
 <script>
-import particlesjs from "./components/particlesjs"
-import headercomponent from "./components/headercomponent"
-import maincard from "./components/maincard"
-import footercomponent from "./components/footercomponent"
+import particlesjs from "./components/particles-js"
+import headercomponent from "./components/header-component"
+import maincard from "./components/main-card"
+import footercomponent from "./components/footer-component"
 
 export default {
   name: "app",

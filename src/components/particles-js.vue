@@ -5,7 +5,7 @@
 <script>
 import "particles.js"
 export default {
-  name: "particlesjs",
+  name: "particles-js",
 
   mounted() {
     this.$nextTick(() => {

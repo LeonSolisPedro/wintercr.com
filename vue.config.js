@@ -1,15 +1,22 @@
-module.exports = {
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
   configureWebpack: {
-    devtool: "source-map",
+    resolve: {
+      alias: {
+        'bootstrap-vue$': 'bootstrap-vue/src/index.js'
+      }
+    },
     module: {
       rules: [
-        { test: /\.(jsfake)$/i, use: [{ loader: 'file-loader', options: { name: 'supportedbrowsers/[name].[contenthash:7].js', } }] },
-        { test: /\.(cssfake)$/i, use: [{ loader: 'file-loader', options: { name: 'supportedbrowsers/[name].[contenthash:7].css', } }] }
+        { test: /\.js$/, exclude: /node_modules\/(?!bootstrap-vue\/src\/)/, use: {loader: 'babel-loader',options: { presets: ['@babel/preset-env'] } } },
+        { test: /\.(jsfake)$/i, type: 'asset/resource', generator: { filename: 'supportedbrowsers/[name].[contenthash:7].js' } },
+        { test: /\.(cssfake)$/i, type: 'asset/resource', generator: { filename: 'supportedbrowsers/[name].[contenthash:7].css' } }
       ]
     }
   },
+  transpileDependencies: true,
   productionSourceMap: false,
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule("vue")
       .use("vue-loader")
@@ -29,4 +36,4 @@ module.exports = {
         return options
       })
   }
-}
+})

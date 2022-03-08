@@ -1,18 +1,15 @@
 import Vue from "vue"
 
 import { library, config } from "@fortawesome/fontawesome-svg-core"
-import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope"
+import { faHeart } from "@fortawesome/free-solid-svg-icons/faHeart"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 config.autoAddCss = false
+
 library.add(faEnvelope, faTwitter, faGithub, faHeart)
 
-const plugin = {
-  install(Vue) {
-    Vue.component("font-awesome-icon", FontAwesomeIcon)
-  }
-}
-
-Vue.use(plugin)
+Vue.component("font-awesome-icon", FontAwesomeIcon)

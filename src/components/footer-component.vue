@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "footercomponent"
+  name: "footer-component"
 }
 </script>
 
