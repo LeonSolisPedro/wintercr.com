@@ -1,22 +1,53 @@
 <template>
-  <div id="particles-js"></div>
+  <div id="tsparticles"></div>
 </template>
 
+<style>
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+}
+</style>
+
 <script>
-import "particles.js"
+import { loadBaseMover } from "tsparticles-move-base"
+import { loadCircleShape } from "tsparticles-shape-circle"
+import { loadColorUpdater } from "tsparticles-updater-color"
+import { loadOpacityUpdater } from "tsparticles-updater-opacity"
+import { loadOutModesUpdater } from "tsparticles-updater-out-modes"
+import { tsParticles } from "tsparticles-engine";
+let particlesContainer = null
+let reduceMotionMedia = window.matchMedia("(prefers-reduced-motion: reduce)")
+const delay = ms => new Promise(res => setTimeout(res, ms));
 export default {
-  name: "particles-js",
 
   mounted() {
     this.$nextTick(() => {
       this.initParticlesJS()
+      reduceMotionMedia.addEventListener('change', this.setMotionParticles)
     })
   },
 
-  methods: {
-    initParticlesJS() {
-      /* eslint-disable */
-      particlesJS("particles-js", {
+  beforeDestroy () {
+    particlesContainer.destroy()
+    reduceMotionMedia.removeEventListener('change', this.setMotionParticles)
+    reduceMotionMedia = null
+    particlesContainer = null
+  },
+
+   methods: {
+    async initParticlesJS(){
+      await loadBaseMover(tsParticles)
+      await loadCircleShape(tsParticles)
+      await loadColorUpdater(tsParticles)
+      await loadOpacityUpdater(tsParticles)
+      await loadOutModesUpdater(tsParticles)
+      particlesContainer = await tsParticles.load("tsparticles", {
+        fullScreen: {
+          enable: false
+        },
         particles: {
           number: {
             value: 120,
@@ -58,13 +89,6 @@ export default {
               sync: false
             }
           },
-          line_linked: {
-            enable: false,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1
-          },
           move: {
             enable: true,
             speed: 1,
@@ -72,12 +96,7 @@ export default {
             random: true,
             straight: false,
             out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 600
-            }
+            bounce: false
           }
         },
         interactivity: {
@@ -120,17 +139,17 @@ export default {
           }
         },
         retina_detect: true
-      })
+      });
+      await delay(10)
+      this.setMotionParticles()
+    },
+
+    setMotionParticles(){
+      if(reduceMotionMedia.matches)
+         particlesContainer.pause()
+      else
+        particlesContainer.play()
     }
-  }
+   }
 }
 </script>
-
-<style>
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #232741;
-}
-</style>

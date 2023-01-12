@@ -1,49 +1,29 @@
 {
   "name": "wintercr.com",
-  "version": "0.1.5",
-  "private": true,
+  "version": "2.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "report": "vue-cli-service build --report",
-    "prebuild": "node ./src/plugins/supportedbrowsers/createBrowsers.js"
+    "serve": "vite",
+    "build": "vite build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.36",
-    "@fortawesome/free-brands-svg-icons": "5.15.4",
-    "@fortawesome/free-solid-svg-icons": "5.15.4",
-    "@fortawesome/vue-fontawesome": "^2.0.6",
-    "bootstrap": "^4.6.1",
-    "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.8.3",
-    "particles.js": "^2.0.0",
-    "vue": "^2.6.14",
-    "vue-scrollto": "^2.20.0"
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^2.0.9",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "tsparticles-engine": "^2.7.1",
+    "tsparticles-move-base": "^2.7.1",
+    "tsparticles-shape-circle": "^2.7.1",
+    "tsparticles-updater-color": "^2.7.1",
+    "tsparticles-updater-opacity": "^2.7.1",
+    "tsparticles-updater-out-modes": "^2.7.1",
+    "vue": "^2.7.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/cli-service": "~5.0.8",
-    "browserslist-useragent-regexp": "^3.0.2",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "sass": "^1.57.1",
+    "vite": "^3.0.2"
   }
 }

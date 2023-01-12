@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <particlesjs />
+  <div>
+    <ts-particles />
 
-    <headercomponent />
+    <header-component />
 
-    <maincard />
+    <main-card />
 
-    <b-container id="aboutme" class="px-5 py-4">
+    <div id="aboutme" class="container px-5 py-4">
 
       <h1 class="text-center">Acerca de Mí</h1>
 
       <div class="py-4 text-center">
-        <b-img src="./assets/colorcito.png" rounded fluid alt="Fluid image"></b-img>
+        <img src="./assets/colorcito.webp" class="img-fluid rounded" alt="Colorcito">
       </div>
 
       <p>Como desarrollador web moderno, siempre estoy buscando la oportunidad de obtener nuevas experiencias trabajando
@@ -28,39 +28,45 @@
       </blockquote>
 
       <div class="text-center">
-        <b-button href="mailto:pedro@wintercr.com" variant="primary" class="m-2" target="_top">Contáctame por Correo
-          <font-awesome-icon :icon="[ 'fa', 'envelope' ]" />
-        </b-button>
-        <b-button href="https://twitter.com/LeonSolisPedro" variant="info" class="m-3" target="_blank">Sígueme en
-          Twitter
-          <font-awesome-icon :icon="[ 'fab', 'twitter' ]" />
-        </b-button>
-        <b-button href="https://github.com/LeonSolisPedro" variant="secondary" class="m-2" target="_blank">Ver proyectos en
-          Github
-          <font-awesome-icon :icon="[ 'fab', 'github' ]" />
-        </b-button>
+        <a class="btn btn-primary m-2" target="_top" href="mailto:pedro@wintercr.com">Contáctame por Correo <font-awesome-icon icon="fa-solid fa-envelope" /></a>
+        <a class="btn btn-twitter m-3" target="_blank" href="https://twitter.com/LeonSolisPedro">Sígueme en Twitter <font-awesome-icon icon="fa-brands fa-twitter" /></a>
+        <a class="btn btn-secondary m-2" target="_blank" href="https://github.com/LeonSolisPedro">Ver proyectos en Github <font-awesome-icon icon="fa-brands fa-github" /></a>
       </div>
 
-    </b-container>
+    </div>
 
-    <footercomponent />
+    <footer-component />
 
   </div>
 </template>
 
+<style lang="scss">
+.btn-twitter {
+  --bs-btn-color: var(--bs-white) !important;
+  --bs-btn-bg: #008390 !important;
+  --bs-btn-hover-bg: #00707A !important;
+  --bs-btn-hover-color: var(--bs-white) !important;
+}
+
+@media (min-width: 1400px) {
+ .container {
+    max-width: 1140px !important;
+  }
+}
+</style>
+
 <script>
-import particlesjs from "./components/particles-js"
-import headercomponent from "./components/header-component"
-import maincard from "./components/main-card"
-import footercomponent from "./components/footer-component"
+import TsParticles from "./components/TsParticles.vue"
+import HeaderComponent from "./components/HeaderComponent.vue"
+import MainCard from "./components/MainCard.vue"
+import FooterComponent from "./components/FooterComponent.vue"
 
 export default {
-  name: "app",
   components: {
-    particlesjs,
-    headercomponent,
-    maincard,
-    footercomponent
+    TsParticles,
+    HeaderComponent,
+    MainCard,
+    FooterComponent
   }
 }
 </script>
