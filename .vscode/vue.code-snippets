@@ -1,0 +1,14 @@
+{
+  "<script> export default": {
+    "prefix": "<script",
+    "body": [
+      "<script>",
+      "export default {",
+      "  $0",
+      "}",
+      "</script>"
+    ],
+    "description": "Script Options API",
+    "scope": "vue"
+  }
+}

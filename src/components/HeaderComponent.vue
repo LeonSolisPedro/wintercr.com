@@ -2,13 +2,16 @@
   <header class="m-3">
 
     <div>
-      <a class="d-inline-block mx-2" target="_top" href="mailto:pedro@wintercr.com" v-tooltip aria-label="Contáctame por Correo" data-bs-title="Contáctame por Correo" data-bs-placement="bottom">
+      <a class="d-inline-block mx-2" target="_top" href="mailto:pedro@wintercr.com" v-tooltip
+        aria-label="Contáctame por Correo" data-bs-title="Contáctame por Correo" data-bs-placement="bottom">
         <font-awesome-icon icon="fa-solid fa-envelope" size="3x" />
       </a>
-      <a class="d-inline-block mx-3" target="_blank" href="https://twitter.com/LeonSolisPedro" v-tooltip aria-label="Twitter" data-bs-title="Twitter" data-bs-placement="bottom">
+      <a class="d-inline-block mx-3" target="_blank" href="https://twitter.com/LeonSolisPedro" v-tooltip
+        aria-label="Twitter" data-bs-title="Twitter" data-bs-placement="bottom">
         <font-awesome-icon icon="fa-brands fa-twitter" size="3x" />
       </a>
-      <a class="d-inline-block mx-2" target="_blank" href="https://github.com/LeonSolisPedro" v-tooltip aria-label="Github" data-bs-title="Github" data-bs-placement="bottom">
+      <a class="d-inline-block mx-2" target="_blank" href="https://github.com/LeonSolisPedro" v-tooltip
+        aria-label="Github" data-bs-title="Github" data-bs-placement="bottom">
         <font-awesome-icon icon="fa-brands fa-github" size="3x" />
       </a>
     </div>

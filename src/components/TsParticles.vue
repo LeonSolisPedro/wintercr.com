@@ -30,15 +30,15 @@ export default {
     })
   },
 
-  beforeDestroy () {
+  beforeDestroy() {
     particlesContainer.destroy()
     reduceMotionMedia.removeEventListener('change', this.setMotionParticles)
     reduceMotionMedia = null
     particlesContainer = null
   },
 
-   methods: {
-    async initParticlesJS(){
+  methods: {
+    async initParticlesJS() {
       await loadBaseMover(tsParticles)
       await loadCircleShape(tsParticles)
       await loadColorUpdater(tsParticles)
@@ -144,12 +144,12 @@ export default {
       this.setMotionParticles()
     },
 
-    setMotionParticles(){
-      if(reduceMotionMedia.matches)
-         particlesContainer.pause()
+    setMotionParticles() {
+      if (reduceMotionMedia.matches)
+        particlesContainer.pause()
       else
         particlesContainer.play()
     }
-   }
+  }
 }
 </script>
