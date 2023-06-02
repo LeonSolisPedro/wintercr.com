@@ -1,16 +1,14 @@
-import Vue from "vue"
-
-const scrollto = {
+export default {
   // The install method will be called with the Vue constructor as         
   // the first argument, along with possible options
-  install(Vue) {
+  install(app){
     // Add a component or directive to your plugin, so it will be installed globally to your project.
-    Vue.directive("scrollto", {
-      bind(el, binding) {
+    app.directive("scrollto", {
+      beforeMount(el, binding) {
         el.addEventListener("click", scrollFunction);
         el.parameter1 = binding.value;
       },
-      unbind(el) {
+      unmounted(el) {
         el.removeEventListener("click", scrollFunction);
         el.parameter1 = null
         delete el.parameter1
@@ -28,5 +26,3 @@ function scrollFunction(event) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
-
-Vue.use(scrollto)
