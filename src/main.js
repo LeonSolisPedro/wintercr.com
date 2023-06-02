@@ -1,13 +1,12 @@
-import Vue from "vue"
+import { createApp } from "vue"
 import App from "./App.vue"
+import bootstrap from "./plugins/bootstrap"
+import fontawesome from "./plugins/fontawesome"
+import scrollto from "./plugins/scrollto"
 
-/**
- * Global plugins goes here
- */
-import "./plugins/fontawesome"
-import "./plugins/scrollto"
-import "./plugins/bootstrap"
-
-new Vue({
-  render: (h) => h(App)
-}).$mount("#app")
+//Global Plugins
+const app = createApp(App)
+app.use(bootstrap)
+app.use(fontawesome)
+app.use(scrollto)
+app.mount("#app")

@@ -30,7 +30,7 @@ export default {
     })
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     particlesContainer.destroy()
     reduceMotionMedia.removeEventListener('change', this.setMotionParticles)
     reduceMotionMedia = null
