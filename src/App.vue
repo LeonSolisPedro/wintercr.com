@@ -1,10 +1,12 @@
 <template>
   <div>
-    <ts-particles />
+    <TsParticles />
 
-    <header-component />
+    <HeaderComponent />
 
-    <main-card />
+    <MainCard />
+
+    <CarouselProjects />
 
     <div id="aboutme" class="container px-5 py-4">
 
@@ -38,7 +40,7 @@
 
     </div>
 
-    <footer-component />
+    <FooterComponent />
 
   </div>
 </template>
@@ -63,13 +65,15 @@ import TsParticles from "./components/TsParticles.vue"
 import HeaderComponent from "./components/HeaderComponent.vue"
 import MainCard from "./components/MainCard.vue"
 import FooterComponent from "./components/FooterComponent.vue"
+import CarouselProjects from "./components/CarouselProjects.vue"
 
 export default {
   components: {
     TsParticles,
     HeaderComponent,
     MainCard,
-    FooterComponent
+    FooterComponent,
+    CarouselProjects
   }
 }
 </script>

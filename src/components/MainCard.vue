@@ -10,7 +10,7 @@
             Me llamo <i>Pedro León</i>
           </p>
           <div class="text-center">
-            <button type="button" class="btn btn-primary" v-scrollto="'#aboutme'">Acerca de Mí</button>
+            <button type="button" class="btn btn-primary" v-scrollto="'#carouselprojects'">Ver proyectos </button>
           </div>
         </div>
       </div>
