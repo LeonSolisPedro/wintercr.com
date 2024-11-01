@@ -1,5 +1,5 @@
 import Tooltip from "bootstrap/js/src/tooltip"
-import "bootstrap/scss/bootstrap.scss"
+import "./customStyle.scss"
 import "bootstrap/js/src/tab"
 import "bootstrap/js/src/carousel"
 

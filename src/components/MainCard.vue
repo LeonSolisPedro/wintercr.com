@@ -3,14 +3,14 @@
     <div class="row vh-100 justify-content-center align-items-center">
 
       <div class="card" style="width: 18rem">
-        <img src="../assets/yo.webp" class="card-img-top" alt="Image" />
+        <img src="../assets/yo.webp" class="card-img-top rounded pt-2" alt="Image" />
         <div class="card-body">
           <h4 class="card-title text-center"> ¡Hola! </h4>
           <p class="card-text">
             Me llamo <i>Pedro León</i>
           </p>
           <div class="text-center">
-            <button type="button" class="btn btn-primary" v-scrollto="'#carouselprojects'">Ver proyectos </button>
+            <button type="button" class="btn btn-primary" v-scrollto="'#carouselprojects'">Ver proyectos <font-awesome-icon icon="fa-solid fa-rocket" /></button>
           </div>
         </div>
       </div>
