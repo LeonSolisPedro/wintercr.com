@@ -28,6 +28,9 @@
 
 <script>
 import CarouselForEach from './_CarouselForEach.vue';
+import viajaya1 from "../assets/viajaya1.png"
+import viajaya2 from "../assets/viajaya2.png"
+import viajaya3 from "../assets/viajaya3.png"
 
 export default {
   components: {
@@ -45,29 +48,14 @@ export default {
           id: 1,
           title: "Viaja Ya",
           titleNavBar: "Viaja Ya",
-          iconNavBar: "fa-solid fa-house",
+          iconNavBar: "fa-solid fa-plane-departure",
           description: "Viaja Ya es una agencia de viajes que se especializa en la venta de tours a través de contenido dinámico y consumo de APIs",
           liveLink: "https://viajaya.wintercr.com",
           linkCode: "https://github.com/LeonSolisPedro/ViajaYa",
           images: [
-            "https://b2-backblaze-stackpath.b-cdn.net/1579919/jvezjw_b0e6664ff4d37dde447277873d0c7d5b59b17f06.jpg",
-            "https://as1.ftcdn.net/v2/jpg/08/16/30/22/1000_F_816302285_hckOpmwhWP0WeQzEi5qdYANf5w0HT1u2.jpg",
-            "https://www.surreal.co.za/leadership/swatches/swatch_landscape_superhero_jun2023_1_9b85.jpg"
-          ],
-          isFavorite: true
-        },
-        {
-          id: 2,
-          title: "BBB",
-          titleNavBar: "BB",
-          iconNavBar: "fa-solid fa-house",
-          description: "bbbbbbbb",
-          liveLink: "https://bbb.wintercr.com",
-          linkCode: "https://github.com/LeonSolisPedro/BBB",
-          images: [
-            "https://imgcdn.stablediffusionweb.com/2024/9/25/c61e95ee-c9ba-4541-a24d-8ec57e240d28.jpg",
-            "https://picsum.photos/536/354",
-            "https://picsum.photos/536/354"
+            viajaya1,
+            viajaya2,
+            viajaya3
           ],
           isFavorite: true
         }
