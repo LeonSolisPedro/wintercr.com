@@ -5,7 +5,7 @@
 
     <div class="row mt-5 mb-0">
       <div class="col-md-3">
-        <div class="nav flex-column nav-pills me-3 mb-2" role="tablist">
+        <div class="nav flex-column nav-pills me-3 mb-3" role="tablist">
           <button v-for="(car, index) in favCarousel" class="nav-link" :class="{ 'active': index === 0 }"
             :data-bs-target="`#proyecto-${index}`" data-bs-toggle="pill" type="button">
             <font-awesome-icon :icon="car.iconNavBar" /> {{ car.titleNavBar }}
