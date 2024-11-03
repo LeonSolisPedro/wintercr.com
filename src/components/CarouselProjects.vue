@@ -34,6 +34,7 @@ import viajaya3 from "../assets/viajaya3.png"
 import quizzy1 from "../assets/quizzy1.png"
 import quizzy2 from "../assets/quizzy2.png"
 import quizzy3 from "../assets/quizzy3.png"
+import opentickets1 from "../assets/opentickets1.png"
 
 export default {
   components: {
@@ -67,6 +68,17 @@ export default {
           liveLink: "https://quizzy.wintercr.com",
           linkCode: "https://github.com/LeonSolisPedro/Quizzy",
           images: [ quizzy1, quizzy2, quizzy3 ],
+          isFavorite: true
+        },
+        {
+          id: 3,
+          title: "Open Tickets",
+          titleNavBar: "OpenTickets",
+          iconNavBar: "fa-solid fa-ticket",
+          description: "Open Tickets, es un sistema de tickets de asistencia técnica, que te permitirá priorizar tus actividades y atender equipos de cómputo defectuosos",
+          liveLink: "https://opentickets.wintercr.com",
+          linkCode: "https://github.com/LeonSolisPedro/opentickets",
+          images: [ opentickets1 ],
           isFavorite: true
         }
       ]
