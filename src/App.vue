@@ -43,8 +43,7 @@
 
       </div>
     </div>
-
-
+    
     <FooterComponent class="gray-background" />
 
   </div>
