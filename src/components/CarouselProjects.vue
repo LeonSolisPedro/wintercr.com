@@ -1,9 +1,9 @@
 <template>
-  <div id="carouselprojects" class="container px-5 py-4">
+  <div id="carouselprojects" class="container px-5 py-5">
 
     <h2 class="text-center">Mis proyectos</h2>
 
-    <div class="row mt-5 mb-0">
+    <div class="row mt-5 mb-2">
       <div class="col-md-3">
         <div class="nav flex-column nav-pills me-3 mb-3" role="tablist">
           <button v-for="(car, index) in favCarousel" class="nav-link" :class="{ 'active': index === 0 }"

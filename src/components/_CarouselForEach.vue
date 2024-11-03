@@ -1,20 +1,20 @@
 <template>
-  <div :id="`carouselExampleCaptions${car.id}`" class="carousel carousel-fade slide">
+  <div :id="`carouselExampleCaptions${car.id}`" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button v-for="(img, index) in car.images" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
         :data-bs-slide-to="index" :class="{ 'active': index === 0 }"></button>
     </div>
     <div class="carousel-inner rounded">
-      <div v-for="(img, index) in car.images" class="carousel-item" :class="{ 'active': index === 0 }">
+      <div v-for="(img, index) in car.images" class="carousel-item" :class="{ 'active': index === 0 }" data-bs-interval="5500">
         <img :src="img" class="d-block w-100 fantastic-image" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
+    <button v-if="car.images.length !== 1" class="carousel-control-prev" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
       data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
       <span class="visually-hidden">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
+    <button v-if="car.images.length !== 1" class="carousel-control-next" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
       data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
       <span class="visually-hidden">Siguiente</span>
