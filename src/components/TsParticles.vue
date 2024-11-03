@@ -9,6 +9,9 @@
   height: 100%;
   background-color: #232741;
 }
+[data-bs-theme="dark"] #tsparticles {
+  background-color: #1B1F39 !important;
+}
 </style>
 
 <script>
