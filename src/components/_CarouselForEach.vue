@@ -25,9 +25,9 @@
     <p class="text-center">{{ car.description }}</p>
   </div>
   <div class="text-center d-flex flex-column align-items-center gap-2 mt-3">
-    <a :href="car.liveLink" target="_blank" class="btn btn-primary btn-sm">Ver <font-awesome-icon class="ms-1"
+    <a v-if="car.liveLink" :href="car.liveLink" target="_blank" class="btn btn-primary btn-sm">Ver <font-awesome-icon class="ms-1"
         icon="fa-solid fa-play" /></a>
-    <a :href="car.linkCode" target="_blank" class="btn btn-primary btn-sm">Ver código <font-awesome-icon class="ms-1"
+    <a v-if="car.linkCode" :href="car.linkCode" target="_blank" class="btn btn-primary btn-sm">Ver código <font-awesome-icon class="ms-1"
         icon="fa-solid fa-code" /></a>
   </div>
 </template>
