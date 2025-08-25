@@ -11,12 +11,12 @@
     </div>
     <button v-if="car.images.length !== 1" class="carousel-control-prev" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
       data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+      <font-awesome-icon icon="fa-solid fa-arrow-left" size="3x" />
       <span class="visually-hidden">Anterior</span>
     </button>
     <button v-if="car.images.length !== 1" class="carousel-control-next" type="button" :data-bs-target="`#carouselExampleCaptions${car.id}`"
       data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
+      <font-awesome-icon icon="fa-solid fa-arrow-right" size="3x" />
       <span class="visually-hidden">Siguiente</span>
     </button>
   </div>
