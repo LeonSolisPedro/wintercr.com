@@ -34,7 +34,7 @@
         <div class="text-center">
           <a class="btn btn-primary m-2" target="_top" href="mailto:pedro@wintercr.com">Contáctame por Correo
             <font-awesome-icon icon="fa-solid fa-envelope" /></a>
-          <a class="btn btn-twitter m-3" target="_blank" href="https://twitter.com/LeonSolisPedro">Sígueme en Twitter
+          <a class="btn btn-twitter m-3" target="_blank" href="https://twitter.com/LeonSolisPedro">Sígueme en X
             <font-awesome-icon icon="fa-brands fa-twitter" /></a>
           <a class="btn btn-secondary m-2" target="_blank" href="https://github.com/LeonSolisPedro">Ver proyectos en
             Github
